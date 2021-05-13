@@ -12,7 +12,8 @@ export default class MainPage extends Component {
 		history: [{
 			method: 'GET',
 			URL: 'http://blahblahtest.com'
-		}]
+		}],
+		results: '[{ this: is not a real result}]'
 	}
 
 	handleFormSubmit = async e => {
@@ -35,7 +36,7 @@ export default class MainPage extends Component {
 
 
 	render() {
-		const { address, radio, body, history } = this.state;
+		const { address, radio, body, history, results } = this.state;
 		return (
 			<div className={style.mainPage}>
 				<header>RESTLAB</header>
@@ -49,7 +50,7 @@ export default class MainPage extends Component {
 					bodyValue={body}
 				/>
 				<Results 
-					results="this is a result"
+					results={results}
 				/>
 				<HistoryList
 					history={history}
