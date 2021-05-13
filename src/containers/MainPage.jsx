@@ -8,7 +8,11 @@ export default class MainPage extends Component {
 	state = {
 		address: 'endpoint goes here',
 		radio: 'GET',
-		body: 'JSON goes here'
+		body: 'JSON goes here',
+		history: [{
+			method: 'GET',
+			URL: 'http://blahblahtest.com'
+		}]
 	}
 
 	handleFormSubmit = async e => {
@@ -31,7 +35,7 @@ export default class MainPage extends Component {
 
 
 	render() {
-		const { address, radio, body } = this.state;
+		const { address, radio, body, history } = this.state;
 		return (
 			<div className={style.mainPage}>
 				<header>RESTLAB</header>
@@ -48,10 +52,7 @@ export default class MainPage extends Component {
 					results="this is a result"
 				/>
 				<HistoryList
-					history={[{
-						method: 'GET',
-						URL: 'http://blahblahtest.com'
-					}]}
+					history={history}
 				/>
 			</div>
 		)
