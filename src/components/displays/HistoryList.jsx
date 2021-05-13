@@ -1,14 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import style from './HistoryList.css';
+import HistoryItem from './HistoryItem';
 
 const HistoryList = ({ history }) => (
 	<ul className={style.historyList}>
-		{history.map(item => (
-			<li>
-				<span>
-					{item.method} {item.URL}
-				</span>
+		{history.map((item, idx) => (
+			<li key={`${item.method}-${item.url}-{idx}`}>
+				<HistoryItem
+					method={item.method}
+					URL={item.URL}
+				/>
 			</li>
 		))}
 	</ul>
