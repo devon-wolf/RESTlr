@@ -12,74 +12,77 @@ const SearchForm = ({ handleFormSubmit, handleAddressChange, handleRadioChange, 
 			value={addressValue}
 			aria-label="address field"
 			onInput={handleAddressChange}
+			placeholder="Endpoint goes here"
+			className={style.addressBar}
 		/>
 
-		<label>
-			
-			<input
-				type="radio"
-				name="method"
-				value="GET"
-				checked={radioValue === 'GET'}
-				onChange={handleRadioChange}
-			/>
-			<span>GET</span>
-		</label>
+		<span className={style.radioButtons}>
+			<label>
+				<input
+					type="radio"
+					name="method"
+					value="GET"
+					checked={radioValue === 'GET'}
+					onChange={handleRadioChange}
+				/>
+				<span>GET</span>
+			</label>
 
-		<label>
-			
-			<input
-				type="radio"
-				name="method"
-				value="POST"
-				checked={radioValue === 'POST'}
-				onChange={handleRadioChange}
-			/>
-			<span>POST</span>
-		</label>
+			<label>
+				<input
+					type="radio"
+					name="method"
+					value="POST"
+					checked={radioValue === 'POST'}
+					onChange={handleRadioChange}
+				/>
+				<span>POST</span>
+			</label>
 
-		<label>
-			
-			<input
-				type="radio"
-				name="method"
-				value="PUT"
-				checked={radioValue === 'PUT'}
-				onChange={handleRadioChange}
-			/>
-			<span>PUT</span>
-		</label>
+			<label>
+				<input
+					type="radio"
+					name="method"
+					value="PUT"
+					checked={radioValue === 'PUT'}
+					onChange={handleRadioChange}
+				/>
+				<span>PUT</span>
+			</label>
 
-		<label>
-			
-			<input 
-				type="radio"
-				name="method"
-				value="PATCH"
-				checked={radioValue === 'PATCH'}
-				onChange={handleRadioChange}
-			/>
-			<span>PATCH</span>
-		</label>
+			<label>
+				<input 
+					type="radio"
+					name="method"
+					value="PATCH"
+					checked={radioValue === 'PATCH'}
+					onChange={handleRadioChange}
+				/>
+				<span>PATCH</span>
+			</label>
 
-		<label>
-			
-			<input
-				type="radio"
-				name="method"
-				value="DELETE"
-				checked={radioValue === 'DELETE'}
-				onChange={handleRadioChange}
-			/>
-			<span>DELETE</span>
-		</label>
+			<label>
+				<input
+					type="radio"
+					name="method"
+					value="DELETE"
+					checked={radioValue === 'DELETE'}
+					onChange={handleRadioChange}
+				/>
+				<span>DELETE</span>
+			</label>
+		</span>
 
-		<textarea 
-			value={bodyValue}
-			aria-label="request-body"
-			onInput={handleBodyChange}
-		>
-		</textarea>
+		<label className={style.requestBody}>
+			<span>JSON Request Body:</span>
+			<textarea 
+				value={bodyValue}
+				aria-label="request-body"
+				onInput={handleBodyChange}
+			>
+			</textarea>
+		</label>
+		
 
 		<button>Send Request</button>
 	</form>

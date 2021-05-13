@@ -6,9 +6,9 @@ import HistoryList from '../components/displays/HistoryList';
 
 export default class MainPage extends Component {
 	state = {
-		address: 'endpoint goes here',
+		address: '',
 		radio: 'GET',
-		body: 'JSON goes here',
+		body: '',
 		history: [{
 			method: 'GET',
 			URL: 'http://blahblahtest.com'
@@ -37,7 +37,7 @@ export default class MainPage extends Component {
 
 	render() {
 		const { address, radio, body, history, results } = this.state;
-		console.log(radio);
+		
 		return (
 			<div className={style.mainPage}>
 				<header>
