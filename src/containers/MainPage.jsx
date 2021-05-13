@@ -37,9 +37,12 @@ export default class MainPage extends Component {
 
 	render() {
 		const { address, radio, body, history, results } = this.state;
+		console.log(radio);
 		return (
 			<div className={style.mainPage}>
-				<header>RESTLAB</header>
+				<header>
+					<h1>RESTlr</h1>
+				</header>
 				<SearchForm 
 					handleFormSubmit={this.handleFormSubmit}
 					handleAddressChange={this.handleAddressChange}

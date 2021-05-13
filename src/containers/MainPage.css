@@ -1,26 +1,31 @@
 .mainPage {
-	background-color: ivory;
 	display: grid;
 	grid-template-columns: 70% 30%;
-	grid-template-rows: 15% 15% 1fr;
+	grid-template-rows: 10% 15% 1fr;
 	min-height: 100vh;
 	min-width: 90vw;
+	padding: 1rem;
 }
 
 .mainPage header {
 	grid-column: 1 / 3;
-	background-color: burlywood;
 }
 
 .mainPage form {
 	grid-column: 1 / 3;
 	background-color: cadetblue;
+	display: flex;
+	align-items: center;
+	justify-content: center;;
 }
 
 .mainPage section {
 	background-color: cornflowerblue;
+	padding: 1rem;
 }
 
 .mainPage ul {
 	background-color: salmon;
+	margin: 0;
+	padding-top: 1rem;
 }

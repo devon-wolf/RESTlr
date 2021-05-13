@@ -1,0 +1,14 @@
+.searchForm label {
+	cursor: pointer;
+	margin: .5rem;
+}
+
+.searchForm input[type=radio] {
+	display: none;
+}
+
+
+.searchForm input[type=radio]:checked + span {
+	border: solid 2px indigo;
+	font-weight: bold;
+}

@@ -15,7 +15,7 @@ const SearchForm = ({ handleFormSubmit, handleAddressChange, handleRadioChange, 
 		/>
 
 		<label>
-			GET
+			
 			<input
 				type="radio"
 				name="method"
@@ -23,10 +23,11 @@ const SearchForm = ({ handleFormSubmit, handleAddressChange, handleRadioChange, 
 				checked={radioValue === 'GET'}
 				onChange={handleRadioChange}
 			/>
+			<span>GET</span>
 		</label>
 
 		<label>
-			POST
+			
 			<input
 				type="radio"
 				name="method"
@@ -34,10 +35,11 @@ const SearchForm = ({ handleFormSubmit, handleAddressChange, handleRadioChange, 
 				checked={radioValue === 'POST'}
 				onChange={handleRadioChange}
 			/>
+			<span>POST</span>
 		</label>
 
 		<label>
-			PUT
+			
 			<input
 				type="radio"
 				name="method"
@@ -45,10 +47,11 @@ const SearchForm = ({ handleFormSubmit, handleAddressChange, handleRadioChange, 
 				checked={radioValue === 'PUT'}
 				onChange={handleRadioChange}
 			/>
+			<span>PUT</span>
 		</label>
 
 		<label>
-			PATCH
+			
 			<input 
 				type="radio"
 				name="method"
@@ -56,10 +59,11 @@ const SearchForm = ({ handleFormSubmit, handleAddressChange, handleRadioChange, 
 				checked={radioValue === 'PATCH'}
 				onChange={handleRadioChange}
 			/>
+			<span>PATCH</span>
 		</label>
 
 		<label>
-			DELETE
+			
 			<input
 				type="radio"
 				name="method"
@@ -67,6 +71,7 @@ const SearchForm = ({ handleFormSubmit, handleAddressChange, handleRadioChange, 
 				checked={radioValue === 'DELETE'}
 				onChange={handleRadioChange}
 			/>
+			<span>DELETE</span>
 		</label>
 
 		<textarea 
