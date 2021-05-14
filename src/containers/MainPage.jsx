@@ -3,6 +3,7 @@ import style from './MainPage.css';
 import SearchForm from '../components/controls/SearchForm';
 import Results from '../components/displays/Results';
 import HistoryList from '../components/displays/HistoryList';
+import { makeRequest } from '../services/api-utils';
 
 export default class MainPage extends Component {
 	state = {
@@ -18,7 +19,16 @@ export default class MainPage extends Component {
 
 	handleFormSubmit = async e => {
 		e.preventDefault();
-		console.log('FORM SUBMITTED');
+		const { address, radio, body } = this.state;
+		let results;
+		try {
+			results = await makeRequest(radio, address, body);
+		}
+		catch (error) {
+			results = `Something went wrong: ${error}`
+		}
+
+		this.setState({ results });
 	}
 
 	handleAddressChange = e => {

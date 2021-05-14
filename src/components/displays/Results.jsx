@@ -5,7 +5,7 @@ import style from './Results.css';
 const Results = ({ results }) => (
 	<section aria-label="search-results" className={style.resultsSection}>
 		<p>Here are some badly formatted results:</p>
-		<p>{results}</p>
+		<p>{JSON.stringify(results)}</p>
 	</section>
 );
 
