@@ -4,7 +4,7 @@ import style from './HistoryList.css';
 import HistoryItem from './HistoryItem';
 
 const HistoryList = ({ history }) => (
-	<ul className={style.historyList}>
+	<ul aria-label="request-history" className={style.historyList}>
 		{history.map((item, idx) => (
 			<li key={`${item.method}-${item.url}-{idx}`}>
 				<HistoryItem

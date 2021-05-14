@@ -10,7 +10,7 @@ const SearchForm = ({ handleFormSubmit, handleAddressChange, handleRadioChange, 
 	>
 		<input
 			value={addressValue}
-			aria-label="address field"
+			aria-label="address-field"
 			onInput={handleAddressChange}
 			placeholder="Endpoint goes here"
 			className={style.addressBar}
