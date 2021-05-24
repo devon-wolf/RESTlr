@@ -19,7 +19,7 @@ export default class MainPage extends Component {
 
 	handleFormSubmit = async e => {
 		e.preventDefault();
-		const { address, radio, body } = this.state;
+		const { address, radio, body, history } = this.state;
 		let results;
 		try {
 			results = await makeRequest(radio, address, body);
@@ -27,8 +27,15 @@ export default class MainPage extends Component {
 		catch (error) {
 			results = `Something went wrong: ${error}`
 		}
+		
+		const newHistoryItem = {
+			method: radio,
+			URL: address
+		}
 
-		this.setState({ results });
+		const newHistoryArray = [...history, newHistoryItem];
+		
+		this.setState({ results, history: newHistoryArray });
 	}
 
 	handleAddressChange = e => {
