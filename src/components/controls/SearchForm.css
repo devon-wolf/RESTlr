@@ -1,0 +1,34 @@
+.searchForm {
+	display: grid;
+	grid-template-columns: 65% 35%;
+	grid-template-rows: min-content 1fr;
+	row-gap: .5rem;
+}
+
+.radioButtons {
+	margin: auto;
+}
+
+.radioButtons label {
+	cursor: pointer;
+	margin: .25rem;
+}
+
+.radioButtons input[type=radio] {
+	display: none;
+}
+
+.radioButtons input[type=radio]:checked + span {
+	font-weight: bold;
+	background-color: yellowgreen;
+}
+
+.requestBody {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.searchForm button {
+	margin: auto;
+}
